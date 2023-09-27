@@ -1,0 +1,340 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bellefair&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@200;400;500&family=Bellefair&family=Poppins:wght@300;400;700&display=swap);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --font-1:'Barlow Condensed', sans-serif;
+    --font-3: "Barlow", sans-serif;
+    --font-2: 'Bellefair', serif;
+
+    --fsize_18: 18px;
+    --fsize_28: 28px;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    color: #fff;
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/*  */
+
+main{
+    width: 100vw;
+    height: 100%;
+    margin-top: 3rem;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(750px,1200px);
+
+}
+
+#frame{
+    /* border: 1px solid white; */
+
+    height: 100%;
+    width: 85vw;
+    overflow: hidden;
+
+    justify-self: center;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+#frame_inner{
+    height: 100%;
+    width: 290vw;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5rem;
+    
+}
+
+
+section{
+    /* border: 1px solid white; */
+
+
+    max-height: 100%;
+    width: 85vw;
+    padding: 0.5rem 1.5rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4vw;
+
+    grid-template-areas:
+        'no no no'
+        'but div pic'
+    ;
+
+    grid-template-columns: 75px repeat(2,minmax(250px,515px)) ;
+    grid-template-rows: minmax(100px,5vw) minmax(520px,20vw);
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.no23{
+    grid-area: no;
+}
+.num{
+    grid-area: but;
+}
+.termi{
+    grid-area: div;
+}
+.right{
+    grid-area: pic;
+}
+
+
+
+
+/* ------------------------------------------------------------------------- */
+.no23{
+    height: 70px;
+    font-family: var(--font-1);
+    font-size: var(--fsize_28);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    align-self: center;
+}
+.no23 b{
+    font-weight: 700;
+    color: gray;
+    margin-right: 1rem;
+}
+/* ------------------------------------------------------------------------- */
+
+.num{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.num > a{
+    height: 75px;
+    width: 75px;
+    font-family: var(--font-3);
+    font-size: var(--fsize_28);
+    border: 2px solid #999A9E;
+    border-radius: 50%;
+    color: #fff !important;
+
+    display: grid;
+    place-content: center;
+}
+
+.num a:hover{
+    background-color: #ffffff93;
+}
+
+#mun_se{
+    background-color: #fff;
+    color: black !important;
+    border: #fff;
+}
+
+/* ------------------------------------------------------------------------- */
+.termi{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+#the{
+    font-family: var(--font-3);
+    font-size: var(--fsize_18);
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+#space{
+    font-family: var(--font-2);
+    font-size: 56px;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+
+}
+
+.termi p{
+    font-family: var(--font-3);
+    font-size: var(--fsize_18);
+    font-family: 400;
+    line-height: 1.5rem;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.right{
+    height: 100%;
+    width: 100%; 
+
+    margin-left: 1rem;
+}
+.right img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* media -- 1 */
+
+/* ------------------------------------------------------------------------- */
+
+
+@media (max-width:750px){
+
+    main{
+        /* margin-top: 0rem; */
+        grid-template-columns: 1fr;
+
+    }
+
+    #frame{
+        height: 1000px;
+        width: 100vw;
+    }
+
+    #frame_inner{
+        width: 380vw;
+    }
+
+
+
+    section{
+        width: 100vw;
+        padding: 0rem;
+        grid-template-areas:
+            'no'
+            'pic'
+            'but'
+            'div'
+        ;
+    
+        grid-template-columns: 0.9fr;
+        grid-template-rows: 75px minmax(0,36vw) 53px minmax(250px,1fr);
+        row-gap: 2vw;
+    }   
+    
+    .no23{
+        display: flex;
+        align-items: start;
+    }
+
+    .no23 b{
+        margin-right: 0.5rem;
+    }
+
+    .right img{
+        display: none;
+    }
+
+    .r1{
+        background-image: url(../assets/technology/image-launch-vehicle-landscape.jpg);
+
+    }
+    .rp{
+        background-image: url(../assets/technology/image-spaceport-landscape.jpg);
+    }
+    .rc{
+        background-image: url(../assets/technology/image-space-capsule-landscape.jpg);
+    }
+
+    .right{
+        margin-left: 0rem;
+        max-height: 100%;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .num{
+        flex-direction: row;
+    }
+
+    .num > a{
+        height: 43px;
+        width: 43px;
+    font-size: 16PX;
+    }
+
+
+    .termi{
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    #the{
+        font-size: 24px;
+    }
+
+    #space{
+        font-size: 40px;
+    }
+
+    .termi p{
+        font-size: 16px;
+        padding: 0 5rem;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    section{
+        gap: 12vw;
+    }
+
+    .no23{
+        font-weight: 300;
+    }
+    #the{
+        font-size: 16px;
+    }
+
+    #space{
+        font-size: var(--fsize_28);
+    }
+
+    .termi p{
+        font-size: 14px;
+        padding: 0;
+    }
+
+
+}

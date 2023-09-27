@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;500&family=Bellefair&family=Poppins:wght@300;400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: auto;
+    
+    position: relative;
+    top: 35px;
+
+    display: grid;
+    grid-template-columns:100px minmax(0,0.95fr) minmax(0px,750px);
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo{
+    padding-left: 2.5rem;
+}
+#logo img{
+    width: 45px;
+}
+
+nav{
+    height: 100px;
+    
+    padding: 0 20vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+    background-color: #ffffff0e;
+    backdrop-filter: blur(20px);
+}
+ 
+nav a{
+    min-width: 80px;
+    padding: 38px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    /* font-weight: 600; */
+    color: #fff;
+    border-bottom: 4px solid #9da4b000;
+
+}
+
+.dest{
+    min-width: 145px;
+}
+
+#hombot{
+    border-bottom: 3px solid white;
+}
+
+nav a span{
+    /* font-size: 14px; */
+
+    font-weight: 600;
+    margin-right: 5px;
+}
+nav a:hover{
+    border-bottom: 4px solid #9DA4B0;
+}
+header article{
+    position: relative;
+    left: 2vw;
+    z-index: 4; 
+
+    
+}
+
+#menubar, #chk , #cancel
+{
+    display: none;
+}
+
+
+/* --------------------------------------------------------------- */
+
+/*  media query 1 */
+
+/* --------------------------------------------------------------- */
+
+@media (max-width: 770px){
+
+    header{
+        height: 91px;
+        
+        top: 0px;
+    
+        grid-template-columns:80px minmax(440px,440px);
+    
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+
+    #logo{
+        padding-left: 1.7rem;
+    }
+
+    #rule{
+        display: none;
+    }
+
+    nav{
+        height: 90px;
+        padding: 0 15vw;
+        gap: 1.5rem;
+    }
+    
+    nav a{
+        min-width: 40px;
+        padding: 32px 0;
+        font-size: 16px;
+    }
+
+    .dest{
+        min-width: 98px;
+    }
+    
+
+    nav a span{
+        display: none;
+    }
+    
+
+}
+
+
+/* --------------------------------------------------------------- */
+
+/*  media query -- 2 */
+
+/* --------------------------------------------------------------- */
+
+@media (max-width: 551px){
+
+    /*  to avoid // hide nav bar transition */
+
+
+    /* nav{
+        transform: translateX(100%) translateY(0) ;
+    }
+ */
+
+}
+
+
+
+@media (max-width: 576px){
+
+    header{
+        /* position: relative; */
+        grid-template-columns:100px minmax(0,0.95fr) minmax(0px,450px);
+
+        /* overflow: hidden; */
+
+    }
+
+    nav{
+        display: none;
+
+
+        /* background-color: #b64545; */
+        height: 100vh;
+
+        padding: 9rem min(2rem);
+
+        position: absolute;
+        top: 0px;
+        right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start ;
+        gap: 1rem;
+
+        transform: translateX(200%) translateY(0) ;
+        transition: all 1s;
+        
+    }
+
+    nav a{
+        width: 55vw;
+        padding: 0.3rem;
+        font-size: 16px;
+    }
+ 
+    nav a span{
+        display: inline;
+    }
+
+    #menubar{
+        display: inline;
+
+        height: 20px;
+        width: 20px;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-size: cover;
+
+        position: absolute;
+        right: 2rem;
+        z-index: 2;
+    }
+
+    #chk:checked ~ nav{
+        display: flex;
+
+        /* visibility: visible; */
+
+        transform: translateX(0) translateY(0) ;
+        transition: all 1s;
+
+    }
+
+    #chk:checked ~ #menubar{
+
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+
+
+
+
+}
+
